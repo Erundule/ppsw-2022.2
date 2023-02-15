@@ -1,4 +1,4 @@
-package br.upe.ppsw.jabberpoint.apresentacao;
+package control;
 
 import java.awt.Frame;
 import java.awt.Menu;
@@ -10,6 +10,8 @@ import java.awt.event.ActionListener;
 import java.io.IOException;
 import javax.swing.JOptionPane;
 import org.springframework.util.ResourceUtils;
+
+import view.AboutBox;
 
 public class MenuController extends MenuBar {
 
