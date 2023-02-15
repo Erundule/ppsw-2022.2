@@ -3,6 +3,8 @@ package control;
 import java.awt.event.KeyAdapter;
 import java.awt.event.KeyEvent;
 
+import model.Presentation;
+
 public class KeyController extends KeyAdapter {
 
   private Presentation presentation;

@@ -15,6 +15,11 @@ import org.w3c.dom.NodeList;
 import org.xml.sax.SAXException;
 
 import model.Accessor;
+import model.BitmapItem;
+import model.Presentation;
+import model.Slide;
+import model.SlideItem;
+import model.TextItem;
 
 public class XMLAccessor extends Accessor {
 

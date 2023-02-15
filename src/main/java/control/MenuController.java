@@ -11,6 +11,8 @@ import java.io.IOException;
 import javax.swing.JOptionPane;
 import org.springframework.util.ResourceUtils;
 
+import model.Accessor;
+import model.Presentation;
 import view.AboutBox;
 
 public class MenuController extends MenuBar {
