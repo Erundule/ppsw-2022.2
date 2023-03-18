@@ -1,4 +1,4 @@
-package model;
+package br.upe.ppsw.jabberpoint.model;
 
 import java.io.FileNotFoundException;
 import org.springframework.util.ResourceUtils;
@@ -44,7 +44,7 @@ public class DemoPresentation extends Accessor {
     slide.append(1, " ");
     slide.append(1, "Fim da Apresentação");
     slide.append(
-        new BitmapItem(1, ResourceUtils.getFile("classpath:JabberPoint.jpg").getAbsolutePath()));
+        new ImageItem(1, ResourceUtils.getFile("classpath:JabberPoint.jpg").getAbsolutePath()));
     presentation.append(slide);
   }
 

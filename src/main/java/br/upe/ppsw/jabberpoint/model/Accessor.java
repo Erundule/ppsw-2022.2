@@ -1,4 +1,4 @@
-package model;
+package br.upe.ppsw.jabberpoint.model;
 
 import java.io.IOException;
 
