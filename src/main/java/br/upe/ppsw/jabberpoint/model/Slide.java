@@ -1,19 +1,31 @@
 package br.upe.ppsw.jabberpoint.model;
 
-import java.awt.Graphics;
-import java.awt.Rectangle;
-import java.awt.image.ImageObserver;
 import java.util.Vector;
 
-import br.upe.ppsw.jabberpoint.view.Style;
-
 public class Slide {
+
+  public static int getWidth() {
+		return WIDTH;
+	}
+
+  public static int getHeight() {
+		return HEIGHT;
+	}
 
   public final static int WIDTH = 1200;
   public final static int HEIGHT = 800;
 
-  protected TextItem title;
-  protected Vector<SlideItem> items;
+  private TextItem title;
+  
+  public TextItem getTitle() {
+	return title;
+  }
+
+  public void setTitle(TextItem title) {
+	this.title = title;
+  }
+
+protected Vector<SlideItem> items;
 
   public Slide() {
     items = new Vector<SlideItem>();
@@ -23,7 +35,7 @@ public class Slide {
     items.addElement(anItem);
   }
 
-  public String getTitle() {
+  public String getSlideTitle() {
     return title.getText();
   }
 
@@ -46,30 +58,32 @@ public class Slide {
   public int getSize() {
     return items.size();
   }
+  
+//  public void draw(Graphics g, Rectangle area, ImageObserver view) {
+//	    float scale = getScale(area);
+//
+//	    int y = area.y;
+//
+//	    SlideItem slideItem = this.title;
+//	    Style style = Style.getStyle(slideItem.getLevel());
+//	    slideItem.draw(area.x, y, scale, g, style, view);
+//
+//	    y += slideItem.getBoundingBox(g, view, scale, style).height;
+//
+//	    for (int number = 0; number < getSize(); number++) {
+//	      slideItem = (SlideItem) getSlideItems().elementAt(number);
+//
+//	      style = Style.getStyle(slideItem.getLevel());
+//	      slideItem.draw(area.x, y, scale, g, style, view);
+//
+//	      y += slideItem.getBoundingBox(g, view, scale, style).height;
+//	    }
+//	  }
+//
+//	  private float getScale(Rectangle area) {
+//	    return Math.min(((float) area.width) / ((float) WIDTH),
+//	        ((float) area.height) / ((float) HEIGHT));
+//	  }
 
-  public void draw(Graphics g, Rectangle area, ImageObserver view) {
-    float scale = getScale(area);
-
-    int y = area.y;
-
-    SlideItem slideItem = this.title;
-    Style style = Style.getStyle(slideItem.getLevel());
-    slideItem.draw(area.x, y, scale, g, style, view);
-
-    y += slideItem.getBoundingBox(g, view, scale, style).height;
-
-    for (int number = 0; number < getSize(); number++) {
-      slideItem = (SlideItem) getSlideItems().elementAt(number);
-
-      style = Style.getStyle(slideItem.getLevel());
-      slideItem.draw(area.x, y, scale, g, style, view);
-
-      y += slideItem.getBoundingBox(g, view, scale, style).height;
-    }
-  }
-
-  private float getScale(Rectangle area) {
-    return Math.min(((float) area.width) / ((float) WIDTH),
-        ((float) area.height) / ((float) HEIGHT));
-  }
+  
 }
