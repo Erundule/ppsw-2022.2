@@ -12,11 +12,18 @@ import br.upe.ppsw.jabberpoint.view.Style;
 
 public class ImageItem extends SlideItem {
 
-  private BufferedImage bufferedImage;
-  private String imageName;
+  public BufferedImage getBufferedImage() {
+		return bufferedImage;
+	}
 
-  protected static final String FILE = "Arquivo ";
-  protected static final String NOTFOUND = " não encontrado";
+	public void setBufferedImage(BufferedImage bufferedImage) {
+		this.bufferedImage = bufferedImage;
+	}
+	
+	private BufferedImage bufferedImage;
+	private String imageName;
+	protected static final String FILE = "Arquivo ";
+	protected static final String NOTFOUND = " não encontrado";
 
   public ImageItem(int level, String name) {
     super(level);

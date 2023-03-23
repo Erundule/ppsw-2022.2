@@ -15,11 +15,20 @@ import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
 
+import br.upe.ppsw.jabberpoint.view.SlideDrawer;
 import br.upe.ppsw.jabberpoint.view.Style;
 
-public class TextItem extends SlideItem {
+public class TextItem extends SlideItem{
 
-  private String text;
+  public String getText() {
+		return text;
+	}
+
+	public void setText(String text) {
+		this.text = text;
+	}
+
+private String text;
 
   private static final String EMPTYTEXT = "No Text Given";
 
@@ -32,7 +41,7 @@ public class TextItem extends SlideItem {
     this(0, EMPTYTEXT);
   }
 
-  public String getText() {
+  public String getTextItem() {
     return text == null ? "" : text;
   }
 
@@ -100,7 +109,7 @@ public class TextItem extends SlideItem {
     FontRenderContext frc = g2d.getFontRenderContext();
     LineBreakMeasurer measurer = new LineBreakMeasurer(attrStr.getIterator(), frc);
 
-    float wrappingWidth = (Slide.WIDTH - s.getIndent()) * scale;
+    float wrappingWidth = (SlideDrawer.WIDTH - s.getIndent()) * scale;
 
     while (measurer.getPosition() < getText().length()) {
       TextLayout layout = measurer.nextLayout(wrappingWidth);
@@ -113,5 +122,6 @@ public class TextItem extends SlideItem {
   public String toString() {
     return "TextItem[" + getLevel() + "," + getText() + "]";
   }
+
 
 }

@@ -8,8 +8,8 @@ import java.awt.Rectangle;
 import javax.swing.JComponent;
 import javax.swing.JFrame;
 
+import br.upe.ppsw.jabberpoint.controller.Slide;
 import br.upe.ppsw.jabberpoint.model.Presentation;
-import br.upe.ppsw.jabberpoint.model.Slide;
 
 public class SlideViewerComponent extends JComponent {
   private static final long serialVersionUID = 227L;
@@ -35,7 +35,7 @@ public class SlideViewerComponent extends JComponent {
   }
 
   public Dimension getPreferredSize() {
-    return new Dimension(Slide.WIDTH, Slide.HEIGHT);
+    return new Dimension(SlideDrawer.WIDTH, SlideDrawer.HEIGHT);
   }
 
   public void update(Presentation presentation, Slide data) {

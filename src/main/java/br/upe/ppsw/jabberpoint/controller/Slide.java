@@ -1,19 +1,12 @@
-package br.upe.ppsw.jabberpoint.model;
+package br.upe.ppsw.jabberpoint.controller;
 
 import java.util.Vector;
 
+import br.upe.ppsw.jabberpoint.model.SlideItem;
+import br.upe.ppsw.jabberpoint.model.TextItem;
+
+
 public class Slide {
-
-  public static int getWidth() {
-		return WIDTH;
-	}
-
-  public static int getHeight() {
-		return HEIGHT;
-	}
-
-  public final static int WIDTH = 1200;
-  public final static int HEIGHT = 800;
 
   private TextItem title;
   
