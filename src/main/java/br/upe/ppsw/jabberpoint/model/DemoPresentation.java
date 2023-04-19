@@ -5,7 +5,9 @@ import org.springframework.util.ResourceUtils;
 
 import br.upe.ppsw.jabberpoint.controller.Slide;
 
-public class DemoPresentation extends Accessor {
+public class DemoPresentation {
+  public static final String DEMO_NAME = "Apresentação de Demonstração";
+  public static final String DEFAULT_EXTENSION = ".xml";
 
   public void loadFile(Presentation presentation, String unusedFilename)
       throws FileNotFoundException {
